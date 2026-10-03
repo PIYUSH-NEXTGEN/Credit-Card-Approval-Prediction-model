@@ -1,6 +1,6 @@
 # 💳 Credit Card Approval Prediction
 
-An end-to-end machine learning project that predicts whether a credit card applicant is likely to become a **bad customer** — someone who defaults or falls significantly behind on repayments — based on their demographic profile, financial situation, and monthly credit history.
+An end-to-end machine learning project that predicts whether a credit card applicant is likely to become a **bad customer**  someone who defaults or falls significantly behind on repayments  based on their demographic profile, financial situation, and monthly credit history.
 
 The whole workflow lives in a single, well-commented Jupyter notebook: exploratory data analysis (EDA), cleaning, feature engineering, class-imbalance handling, model training/comparison, evaluation, and saving the best model for reuse.
 
@@ -176,24 +176,8 @@ scaler = joblib.load("standard_scaler.pkl")
 
 ---
 
-## ⚠️ Limitations & Future Work
 
-- **Extreme class imbalance (~1.7% positives)** makes minority-class precision/recall low — accuracy is a poor guide, so threshold tuning, focal loss, or cost-sensitive learning could help.
-- The dataset's `STATUS` history is highly skewed toward `0`, `C`, and `X`; richer behavioural features could improve separability.
-- **No hyperparameter tuning** was performed yet — a `GridSearchCV`/`RandomizedSearchCV` or Optuna sweep is a natural next step.
-- No deployed API/UI yet; the saved `.pkl` model is ready to be wrapped in a small inference service.
-- Consider adding a `requirements.txt` and unit tests for reproducible CI.
-
----
-
-## 📄 License
-
-This project is provided for educational purposes. The datasets are the publicly available *Credit Card Approval Prediction* data from Kaggle. Please review their original terms before any commercial use.
-
----
 
 ## 🙌 Acknowledgements
 
 - Kaggle for the *Credit Card Approval Prediction* dataset.
-- The open-source scikit-learn, imbalanced-learn, and XGBoost communities.
-
